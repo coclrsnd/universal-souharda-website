@@ -387,7 +387,11 @@ p {
 }
 
 .hero-metrics {
-  max-width: 720px;
+  max-width: 840px;
+}
+
+.hero-metrics > [class*="col-"] {
+  display: flex;
 }
 
 .metric-card,
@@ -405,6 +409,11 @@ p {
 
 .metric-card {
   padding: 1.4rem;
+  width: 100%;
+  min-height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .metric-card h3 {
@@ -414,7 +423,9 @@ p {
 }
 
 .metric-card p {
-  margin: 0.4rem 0 0;
+  margin: 0.6rem 0 0;
+  line-height: 1.55;
+  max-width: 15ch;
 }
 
 .section-pad {
@@ -534,6 +545,11 @@ p {
   color: white;
 }
 
+.loan-card--featured .info-card__icon {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
 .loan-card--featured .detail-list li::before {
   background: rgba(255, 255, 255, 0.8);
 }
@@ -584,6 +600,86 @@ p {
 .page-hero p {
   max-width: 62ch;
   margin-bottom: 0;
+}
+
+[data-page="about"] .page-hero h1 {
+  max-width: 11.5ch;
+}
+
+[data-page="about"] .page-hero p {
+  max-width: 46rem;
+}
+
+[data-page="about"] .page-hero .text-nowrap {
+  white-space: nowrap;
+}
+
+.about-foundations .section-heading {
+  max-width: 860px;
+  margin-bottom: 2.75rem;
+}
+
+.about-foundations .section-heading h2 {
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.08;
+}
+
+.about-foundations .row.g-4 {
+  --bs-gutter-y: 1.5rem;
+}
+
+.about-foundations .info-card {
+  padding: 2.15rem 2rem 2rem;
+  min-height: 210px;
+}
+
+.about-foundations .info-card h3 {
+  margin-bottom: 0.85rem;
+  font-size: clamp(1.55rem, 2vw, 2rem);
+}
+
+.about-foundations .info-card p {
+  margin-bottom: 0;
+  max-width: 24ch;
+  line-height: 1.6;
+}
+
+.about-foundations .stat-panel {
+  padding: 1.8rem 2rem;
+}
+
+.about-foundations .stat-panel p {
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.about-purpose .row.g-4 {
+  --bs-gutter-y: 1.5rem;
+}
+
+.about-purpose .stat-panel {
+  padding: 2rem 2rem 1.85rem;
+  min-height: 100%;
+}
+
+.about-purpose .stat-panel h3 {
+  margin-bottom: 1.1rem;
+  font-size: clamp(1.8rem, 2.3vw, 2.35rem);
+  line-height: 1.08;
+}
+
+.about-purpose .stat-panel p {
+  margin-bottom: 1.15rem;
+  max-width: 31ch;
+  line-height: 1.72;
+}
+
+.about-purpose .stat-panel p strong {
+  display: inline-block;
+  margin-top: 0.25rem;
+  line-height: 1.5;
 }
 
 .timeline-steps {
@@ -746,6 +842,18 @@ p {
     max-width: 14ch;
   }
 
+  [data-page="about"] .page-hero h1 {
+    max-width: 11ch;
+  }
+
+  .about-foundations .section-heading h2 {
+    max-width: 20ch;
+  }
+
+  .about-foundations .info-card {
+    min-height: 0;
+  }
+
   .hero-panel h2 {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
   }
@@ -776,6 +884,28 @@ p {
   .hero-section h1,
   .page-hero h1 {
     font-size: clamp(1.95rem, 8vw, 2.7rem);
+    max-width: none;
+  }
+
+  .about-foundations .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .about-foundations .section-heading h2,
+  .about-foundations .info-card p {
+    max-width: none;
+  }
+
+  .about-foundations .info-card,
+  .about-foundations .stat-panel {
+    padding: 1.5rem;
+  }
+
+  .about-purpose .stat-panel {
+    padding: 1.5rem;
+  }
+
+  .about-purpose .stat-panel p {
     max-width: none;
   }
 
@@ -834,6 +964,10 @@ p {
 
   .metric-card h3 {
     font-size: 1.75rem;
+  }
+
+  .metric-card {
+    min-height: 0;
   }
 
   .image-placeholder--large {
