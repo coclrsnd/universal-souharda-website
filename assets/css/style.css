@@ -73,7 +73,7 @@ p {
   color: var(--brand-ink);
   font-size: 0.82rem;
   font-weight: 700;
-  animation: ticker-scroll 18s linear infinite;
+  animation: ticker-scroll 40s linear infinite;
 }
 
 .timing-ticker__track span::after {
@@ -945,7 +945,7 @@ p {
   .timing-ticker__track {
     gap: 1.25rem;
     font-size: 0.72rem;
-    animation-duration: 22s;
+    animation-duration: 34s;
   }
 
   .timing-ticker__track span::after {
