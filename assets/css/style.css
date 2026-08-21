@@ -558,6 +558,75 @@ p {
   background: var(--brand-gold-tint);
 }
 
+.core-values-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--brand-tint);
+}
+
+.core-values-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 2.4rem;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  border: 1px solid var(--brand-border);
+  border-top: 4px solid var(--brand-gold);
+  box-shadow: var(--shadow-soft);
+}
+
+.core-values-shell .section-heading {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.core-values-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.core-value-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 143, 136, 0.14);
+  box-shadow: 0 10px 24px rgba(18, 38, 36, 0.05);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--brand-ink);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.core-value-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(18, 38, 36, 0.08);
+  border-color: rgba(15, 143, 136, 0.24);
+  color: var(--brand-teal);
+}
+
+.core-value-pill--large {
+  padding-left: 1.65rem;
+  padding-right: 1.65rem;
+}
+
+.core-value-pill--wide {
+  padding-left: 1.9rem;
+  padding-right: 1.9rem;
+}
+
 .gallery-tile {
   min-height: 250px;
   box-shadow: var(--shadow-soft);
@@ -866,6 +935,14 @@ p {
     height: 210px;
     flex-basis: 210px;
   }
+
+  .core-values-cloud {
+    gap: 0.9rem;
+  }
+
+  .core-values-shell {
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -993,6 +1070,19 @@ p {
 
   .gallery-card__body {
     padding: 1.25rem;
+  }
+
+  .core-value-pill,
+  .core-value-pill--large,
+  .core-value-pill--wide {
+    min-height: 60px;
+    width: 100%;
+    padding: 0.95rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .core-values-shell {
+    padding: 2rem 1rem;
   }
 
   .timeline-step {
