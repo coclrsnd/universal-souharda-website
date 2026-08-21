@@ -627,6 +627,32 @@ p {
   padding-right: 1.9rem;
 }
 
+.member-note-section {
+  background: var(--brand-tint);
+}
+
+.member-note-banner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.member-note-banner__content {
+  padding-left: 1.4rem;
+  border-left: 4px solid var(--brand-gold);
+}
+
+.member-note-banner h2 {
+  margin: 0.75rem 0 0.65rem;
+  font-size: clamp(1.75rem, 2.6vw, 2.45rem);
+  line-height: 1.1;
+}
+
+.member-note-banner p {
+  margin: 0;
+  max-width: 62ch;
+}
+
 .gallery-tile {
   min-height: 250px;
   box-shadow: var(--shadow-soft);
@@ -943,6 +969,10 @@ p {
   .core-values-shell {
     padding: 2.5rem 1.5rem;
   }
+
+  .member-note-banner {
+    max-width: 760px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1083,6 +1113,15 @@ p {
 
   .core-values-shell {
     padding: 2rem 1rem;
+  }
+
+  .member-note-banner {
+    max-width: none;
+  }
+
+  .member-note-banner__content {
+    max-width: none;
+    padding-left: 0.95rem;
   }
 
   .timeline-step {
