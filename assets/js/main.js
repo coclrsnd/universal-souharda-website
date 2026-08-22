@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  if (currentPage === "gallery") {
+    document.querySelectorAll(".gallery-nav-toggle").forEach((toggle) => {
+      toggle.classList.add("active");
+      toggle.setAttribute("aria-current", "page");
+    });
+  }
+
   const revealTargets = document.querySelectorAll(
     ".info-card, .loan-card, .gallery-card, .metric-card, .stat-panel, .contact-panel, .form-panel, .gallery-tile"
   );
@@ -49,5 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
         "Thank you. This is a demo form for now. We can connect it to a live email or backend service later.";
       enquiryForm.reset();
     });
+  }
+
+  const galleryGroups = document.querySelectorAll("[data-gallery-group]");
+
+  if (galleryGroups.length > 0) {
+    const categoryAliases = {
+      bod: "board-members",
+      board: "board-members",
+      "board-members": "board-members",
+      staff: "staff",
+      society: "society",
+    };
+
+    const updateGalleryCategory = (selectedCategory) => {
+      galleryGroups.forEach((group) => {
+        const isMatch = group.dataset.galleryGroup === selectedCategory;
+        group.hidden = !isMatch;
+        group.classList.toggle("is-active", isMatch);
+      });
+    };
+
+    const requestedCategory = new URLSearchParams(window.location.search).get("category");
+    const resolvedCategory = categoryAliases[requestedCategory] || "society";
+    updateGalleryCategory(resolvedCategory);
   }
 });

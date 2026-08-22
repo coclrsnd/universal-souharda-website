@@ -149,6 +149,31 @@ p {
   color: var(--brand-teal);
 }
 
+.dropdown-toggle::after {
+  margin-left: 0.4rem;
+  vertical-align: 0.18em;
+}
+
+.gallery-dropdown-menu {
+  margin-top: 0.6rem;
+  padding: 0.55rem;
+  border: 1px solid rgba(15, 143, 136, 0.12);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.gallery-dropdown-menu .dropdown-item {
+  border-radius: 12px;
+  padding: 0.72rem 0.9rem;
+  font-weight: 600;
+}
+
+.gallery-dropdown-menu .dropdown-item:hover,
+.gallery-dropdown-menu .dropdown-item:focus {
+  background: rgba(15, 143, 136, 0.08);
+  color: var(--brand-teal);
+}
+
 .nav-link.active {
   font-weight: 700;
 }
@@ -838,6 +863,24 @@ p {
   flex-direction: column;
 }
 
+.gallery-category + .gallery-category {
+  margin-top: 2rem;
+}
+
+.gallery-category__intro {
+  margin-bottom: 1.5rem;
+}
+
+.gallery-category__intro h3 {
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+}
+
+.gallery-category__intro p {
+  margin-bottom: 0;
+  max-width: 62ch;
+}
+
 .gallery-card__image {
   height: 230px;
   flex: 0 0 230px;
@@ -861,6 +904,32 @@ p {
 
 .gallery-card__body p {
   margin-bottom: 0;
+}
+
+.gallery-card--placeholder {
+  border-style: dashed;
+}
+
+.gallery-card__image--placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(15, 143, 136, 0.06) 0%, rgba(15, 143, 136, 0.02) 100%);
+}
+
+.gallery-placeholder-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(15, 143, 136, 0.12);
+  color: var(--brand-teal);
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .contact-item + .contact-item {
