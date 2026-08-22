@@ -906,6 +906,31 @@ p {
   margin-bottom: 0;
 }
 
+.gallery-card--staff {
+  text-align: center;
+}
+
+.gallery-card__image--staff {
+  height: 320px;
+  flex-basis: 320px;
+  background: rgba(15, 143, 136, 0.04);
+}
+
+.gallery-photo--staff {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.gallery-card__body--staff {
+  padding-top: 1.15rem;
+  padding-bottom: 1.2rem;
+}
+
+.gallery-card__body--staff h3 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
 .gallery-card--placeholder {
   border-style: dashed;
 }
@@ -1070,6 +1095,11 @@ p {
     flex-basis: 210px;
   }
 
+  .gallery-card__image--staff {
+    height: 300px;
+    flex-basis: 300px;
+  }
+
   .core-values-cloud {
     gap: 0.9rem;
   }
@@ -1217,6 +1247,11 @@ p {
   .gallery-card__image {
     height: 200px;
     flex-basis: 200px;
+  }
+
+  .gallery-card__image--staff {
+    height: 280px;
+    flex-basis: 280px;
   }
 
   .gallery-card__body {
