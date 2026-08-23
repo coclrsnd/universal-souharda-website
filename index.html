@@ -39,53 +39,62 @@
       </div>
     </div>
   </nav>
-  <div class="timing-ticker" aria-label="Society timings">
-    <div class="timing-ticker__track">
-      <span>Society Timings</span>
-      <span>Monday to Friday - 9:30 AM to 5:30 PM</span>
-      <span>Saturday - 9:30 AM to 2:30 PM</span>
-      <span>Sunday - Holiday</span>
-      <span>For member support, please contact the branch during working hours</span>
+  <div class="timing-ticker timing-ticker--home" aria-label="Society timings">
+    <div class="timing-ticker__track timing-ticker__track--home">
+      <span class="timing-ticker__label">Society Timings</span>
+      <span>Monday-Friday: 9:30 AM-5:30 PM</span>
+      <span>Saturday: 9:30 AM-2:30 PM</span>
+      <span>Sunday: Holiday</span>
     </div>
   </div>
 
   <header class="hero-section">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <span class="eyebrow">Built on trust</span>
-          <h1>Trusted, member-focused financial service.</h1>
+      <div class="row align-items-center g-4 g-xl-5">
+        <div class="col-lg-7 col-xl-7">
+          <span class="eyebrow">Built on Trust</span>
+          <h1>Trusted,<br>member-focused<br>financial service.</h1>
           <p class="lead">Universal Souharda Co-op Society Ltd. was established in 2023 to combine the strength of cooperative values with modern technology and build dependable financial support for members and families.</p>
-          <div class="hero-trust-points">
-            <span>Trust in every relationship</span>
-            <span>Simple, accessible service</span>
-            <span>Technology-enabled convenience</span>
+          <div class="hero-trust-points" aria-label="Trust points">
+            <div class="hero-trust-point">
+              <span class="hero-trust-point__icon" aria-hidden="true"></span>
+              <span>Trust in every relationship</span>
+            </div>
+            <div class="hero-trust-point">
+              <span class="hero-trust-point__icon" aria-hidden="true"></span>
+              <span>Simple, accessible service</span>
+            </div>
+            <div class="hero-trust-point">
+              <span class="hero-trust-point__icon" aria-hidden="true"></span>
+              <span>Technology-enabled convenience</span>
+            </div>
           </div>
-          <div class="d-flex flex-wrap gap-3 mt-4">
+          <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
             <a class="btn btn-brand btn-lg" href="deposit-schemes.html">Explore Deposit Schemes</a>
+            <a class="btn btn-outline-brand btn-lg" href="about.html">Know More About Us</a>
           </div>
           <div class="hero-metrics row g-3 mt-4">
             <div class="col-sm-4">
               <div class="metric-card">
                 <h3>2023</h3>
-                <p>Year of establishment</p>
+                <p>Established</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="metric-card">
-                <h3>3</h3>
-                <p>Foundations: trust, service, and technology</p>
+                <h3>Member-First</h3>
+                <p>Service shaped around member needs.</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="metric-card">
-                <h3>6</h3>
-                <p>Deposit schemes featured in the brochure</p>
+                <h3>Modern Service</h3>
+                <p>Accessible support with cooperative values.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 col-xl-5">
           <div class="hero-image-frame">
             <img class="hero-image" src="assets/images/home1.png" alt="Universal Souharda Cooperative Society staff or member service scene">
           </div>
@@ -95,59 +104,68 @@
   </header>
 
   <main>
-    <section class="section-pad">
+    <section class="section-pad home-schemes">
       <div class="container">
         <div class="section-heading text-center mx-auto">
-          <span class="eyebrow">Deposit schemes</span>
+          <span class="eyebrow">Deposit Schemes</span>
           <h2>Savings products designed for daily needs and long-term planning</h2>
           <p>Universal Souharda encourages disciplined savings through practical deposit options for individuals, families, traders, and businesses.</p>
         </div>
         <div class="row g-4 mt-1">
           <div class="col-md-6 col-xl-3">
-            <article class="info-card h-100">
-              <span class="info-card__icon">01</span>
+            <article class="info-card info-card--scheme h-100">
+              <span class="info-card__icon info-card__icon--scheme" aria-hidden="true">SB</span>
               <h3>Savings Bank Account</h3>
               <p>A safe, convenient, and flexible account to manage everyday finances while building a strong savings habit.</p>
+              <a class="info-card__link" href="deposit-schemes.html">Learn more</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3">
-            <article class="info-card h-100">
-              <span class="info-card__icon">02</span>
+            <article class="info-card info-card--scheme h-100">
+              <span class="info-card__icon info-card__icon--scheme" aria-hidden="true">CA</span>
               <h3>Current Account</h3>
               <p>Convenient day-to-day banking support for businesses, traders, and institutions with regular transactions.</p>
+              <a class="info-card__link" href="deposit-schemes.html">Learn more</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3">
-            <article class="info-card h-100">
-              <span class="info-card__icon">03</span>
+            <article class="info-card info-card--scheme h-100">
+              <span class="info-card__icon info-card__icon--scheme" aria-hidden="true">RD</span>
               <h3>Recurring Deposit</h3>
               <p>A monthly saving scheme that builds a disciplined habit and offers planned maturity benefits.</p>
+              <a class="info-card__link" href="deposit-schemes.html">Learn more</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3">
-            <article class="info-card h-100">
-              <span class="info-card__icon">04</span>
+            <article class="info-card info-card--scheme h-100">
+              <span class="info-card__icon info-card__icon--scheme" aria-hidden="true">FM</span>
               <h3>Fixed, MIS, and Pigmy</h3>
               <p>Flexible options for selected tenures, monthly income planning, and regular small-value savings.</p>
+              <a class="info-card__link" href="deposit-schemes.html">Learn more</a>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-tint">
+    <section class="section-pad section-tint home-about-preview">
       <div class="container">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 g-xl-5 align-items-center">
           <div class="col-lg-6">
-            <div class="image-placeholder image-placeholder--large image-placeholder--photo">
-              <img class="section-photo" src="assets/images/society images/u1.jfif" alt="Universal Souharda Cooperative Society office or member photo">
+            <div class="image-placeholder image-placeholder--large image-placeholder--photo home-about-preview__image">
+              <img class="section-photo" src="assets/images/society images/u1.jfif" alt="Universal Souharda Cooperative Society office or member photo" loading="lazy">
             </div>
           </div>
           <div class="col-lg-6">
-            <span class="eyebrow">About the society</span>
+            <span class="eyebrow">About the Society</span>
             <h2>Built on trust. Driven by service. Growing together.</h2>
             <p>Universal Souharda Co-op Society Ltd. was established in 2023 with a clear purpose: to create a trusted, member-focused financial institution that combines cooperative strength with the possibilities of modern technology.</p>
             <p>From the beginning, the society has focused on building meaningful relationships, encouraging savings, supporting genuine financial needs, and contributing to the economic development of the community.</p>
+            <ul class="home-about-preview__points">
+              <li>Member-focused service</li>
+              <li>Cooperative values</li>
+              <li>Modern technology</li>
+            </ul>
             <a class="btn btn-brand mt-3" href="about.html">Read Our Story</a>
           </div>
         </div>
@@ -156,31 +174,29 @@
 
     <section class="section-pad core-values-section">
       <div class="container">
-        <div class="core-values-shell">
-          <div class="section-heading text-center mx-auto">
-            <span class="eyebrow">Core Values</span>
-            <h2>The values that guide our cooperative identity</h2>
-            <p>These values shape how we serve members, build trust, and grow with the community.</p>
-          </div>
-          <div class="core-values-cloud" role="list" aria-label="Core values">
-            <span class="core-value-pill core-value-pill--large" role="listitem">Trust</span>
-            <span class="core-value-pill" role="listitem">Integrity</span>
-            <span class="core-value-pill" role="listitem">Member First</span>
-            <span class="core-value-pill core-value-pill--wide" role="listitem">Service Excellence</span>
-            <span class="core-value-pill" role="listitem">Innovation</span>
-            <span class="core-value-pill" role="listitem">Community</span>
-            <span class="core-value-pill" role="listitem">Responsibility</span>
-            <span class="core-value-pill core-value-pill--large" role="listitem">Growth</span>
-          </div>
+        <div class="section-heading text-center mx-auto">
+          <span class="eyebrow">Core Values</span>
+          <h2>The values that guide our cooperative identity</h2>
+          <p>These values shape how we serve members, build trust, and grow with the community.</p>
+        </div>
+        <div class="core-values-grid" role="list" aria-label="Core values">
+          <div class="core-value-tile" role="listitem"><span></span><strong>Trust</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Integrity</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Member First</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Service Excellence</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Innovation</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Community</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Responsibility</strong></div>
+          <div class="core-value-tile" role="listitem"><span></span><strong>Growth</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad gallery-strip">
+    <section class="section-pad gallery-strip home-gallery-preview">
       <div class="container">
         <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
           <div class="section-heading mb-0">
-            <span class="eyebrow">Visual highlights</span>
+            <span class="eyebrow">Visual Highlights</span>
             <h2>Preview the society atmosphere</h2>
           </div>
           <a class="btn btn-outline-brand" href="gallery.html">View Full Gallery</a>
@@ -188,25 +204,25 @@
         <div class="row g-4">
           <div class="col-sm-6 col-lg-3">
             <div class="gallery-tile">
-              <img class="gallery-photo" src="assets/images/society images/u2.jfif" alt="Universal Souharda Cooperative Society branch interior">
+              <img class="gallery-photo" src="assets/images/society images/u2.jfif" alt="Universal Souharda Cooperative Society branch interior" loading="lazy">
               <span>Branch Interior</span>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3">
             <div class="gallery-tile gallery-tile--warm">
-              <img class="gallery-photo" src="assets/images/society images/u5.jfif" alt="Universal Souharda Cooperative Society member meeting">
+              <img class="gallery-photo" src="assets/images/society images/u5.jfif" alt="Universal Souharda Cooperative Society member meeting" loading="lazy">
               <span>Member Meeting</span>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3">
             <div class="gallery-tile gallery-tile--dark">
-              <img class="gallery-photo" src="assets/images/society images/u6.jfif" alt="Universal Souharda Cooperative Society loan support desk">
+              <img class="gallery-photo" src="assets/images/society images/u6.jfif" alt="Universal Souharda Cooperative Society loan support desk" loading="lazy">
               <span>Loan Support Desk</span>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3">
             <div class="gallery-tile gallery-tile--soft">
-              <img class="gallery-photo" src="assets/images/society images/u7.jfif" alt="Universal Souharda Cooperative Society community event">
+              <img class="gallery-photo" src="assets/images/society images/u7.jfif" alt="Universal Souharda Cooperative Society community event" loading="lazy">
               <span>Community Event</span>
             </div>
           </div>
@@ -216,11 +232,15 @@
 
     <section class="section-pad member-note-section">
       <div class="container">
-        <div class="member-note-banner">
-          <div class="member-note-banner__content">
+        <div class="member-cta">
+          <div class="member-cta__content">
             <span class="eyebrow">Member Note</span>
             <h2>We warmly welcome you to the Universal Souharda family.</h2>
-            <p>Join as a member and unlock exclusive benefits built around trust, service, and shared growth.</p>
+            <p>Join as a member and explore trusted financial services built around cooperative values, member care, and shared growth.</p>
+          </div>
+          <div class="member-cta__actions">
+            <a class="btn btn-brand" href="deposit-schemes.html">Explore Deposit Schemes</a>
+            <a class="btn btn-outline-brand" href="contact.html">Contact Us</a>
           </div>
         </div>
       </div>
