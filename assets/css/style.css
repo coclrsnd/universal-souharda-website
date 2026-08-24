@@ -1203,7 +1203,8 @@ body:not([data-page="home"]) .btn-outline-brand {
   color: var(--brand-muted);
   font-size: 0.8rem;
   line-height: 1.46;
-  max-width: 30ch;
+  max-width: none;
+  width: 100%;
 }
 
 [data-page="deposit-schemes"] .deposit-card__lead strong {
