@@ -1542,7 +1542,7 @@ body:not([data-page="home"]) .btn-outline-brand {
 
 [data-page="home"] .hero-section h1 {
   max-width: 13ch;
-  font-size: clamp(2.5rem, 4.5vw, 4.3rem);
+  font-size: clamp(2.35rem, 4.1vw, 4rem);
   line-height: 1;
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
