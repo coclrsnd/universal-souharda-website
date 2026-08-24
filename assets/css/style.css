@@ -872,15 +872,17 @@ p {
 }
 
 [data-page="about"] .page-hero h1 {
-  max-width: 11.5ch;
+  max-width: none;
+  white-space: nowrap;
 }
 
 [data-page="about"] .page-hero p {
-  max-width: 46rem;
+  max-width: none;
+  width: 100%;
 }
 
 [data-page="about"] .page-hero .text-nowrap {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 body:not([data-page="home"]) .page-hero {
@@ -912,7 +914,7 @@ body:not([data-page="home"]) .btn-outline-brand {
 }
 
 .about-foundations .section-heading h2 {
-  max-width: 18ch;
+  max-width: 30ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.08;
@@ -972,6 +974,27 @@ body:not([data-page="home"]) .btn-outline-brand {
   display: inline-block;
   margin-top: 0.25rem;
   line-height: 1.5;
+}
+
+.about-purpose__quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+}
+
+.about-purpose__quote-mark {
+  color: var(--brand-gold);
+}
+
+.about-purpose__quote p {
+  margin: 0;
+  color: var(--brand-teal);
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(1.08rem, 1.75vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.55;
 }
 
 [data-page="deposit-schemes"] .deposit-hero {
@@ -1882,6 +1905,7 @@ body:not([data-page="home"]) .btn-outline-brand {
 
   [data-page="about"] .page-hero h1 {
     max-width: 11ch;
+    white-space: normal;
   }
 
   .about-foundations .section-heading h2 {
@@ -2015,6 +2039,10 @@ body:not([data-page="home"]) .btn-outline-brand {
 
   .page-hero h1 {
     max-width: 14ch;
+  }
+
+  [data-page="about"] .page-hero h1 {
+    white-space: normal;
   }
 
   [data-page="deposit-schemes"] .deposit-hero {
@@ -2412,3 +2440,4 @@ body:not([data-page="home"]) .btn-outline-brand {
     text-align: left;
   }
 }
+
