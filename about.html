@@ -23,7 +23,14 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link--about" href="about.html?section=about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu gallery-dropdown-menu site-dropdown-menu">
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=about">About Us</a></li>
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=staff">Staff</a></li>
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=bod">BOD</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="deposit-schemes.html">Deposit Schemes</a></li>
           <li class="nav-item"><a class="nav-link" href="loans.html">Loans</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -43,14 +50,14 @@
 
   <header class="page-hero">
     <div class="container">
-      <span class="eyebrow">About us</span>
-      <h1>Built on Trust. Driven by Service. <span class="text-nowrap">Growing Together.</span></h1>
-      <p>Universal Souharda Co-op Society Ltd. was established in 2023 with a clear purpose to create a trusted, member-focused financial institution rooted in cooperative values and modern technology.</p>
+      <span class="eyebrow" data-about-hero-eyebrow>About us</span>
+      <h1 data-about-hero-title>Built on Trust. Driven by Service. Growing Together.</h1>
+      <p data-about-hero-text>Universal Souharda Co-op Society Ltd. was established in 2023 with a clear purpose to create a trusted, member-focused financial institution rooted in cooperative values and modern technology.</p>
     </div>
   </header>
 
   <main>
-    <section class="section-pad about-purpose">
+    <section class="section-pad about-purpose" data-about-group="about">
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
@@ -69,7 +76,7 @@
       </div>
     </section>
 
-    <section class="section-pad section-tint about-foundations">
+    <section class="section-pad section-tint about-foundations" data-about-group="about">
       <div class="container">
         <div class="section-heading text-center mx-auto">
           <span class="eyebrow">Our Journey</span>
@@ -105,7 +112,7 @@
       </div>
     </section>
 
-    <section class="section-pad">
+    <section class="section-pad" data-about-group="about">
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-6">
@@ -120,6 +127,93 @@
               <h3>Our Vision</h3>
               <p>"To build a trusted, progressive and member-centric cooperative financial institution that empowers individuals, strengthens families, and contributes to the sustainable prosperity of our community."</p>
               <p class="mb-0"><strong>"Building trust. Empowering members. Growing together."</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" data-about-group="staff" hidden>
+      <div class="container">
+        <div class="gallery-staff-grid">
+          <div class="gallery-staff-item">
+            <div class="gallery-card gallery-card--staff">
+              <div class="gallery-card__image gallery-card__image--staff">
+                <img class="gallery-photo gallery-photo--staff" src="assets/staff/Abhishek_U_Naik.jpg" alt="Abhishek U Naik">
+              </div>
+              <div class="gallery-card__body gallery-card__body--staff">
+                <h3>Abhishek U Naik</h3>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-staff-item">
+            <div class="gallery-card gallery-card--staff">
+              <div class="gallery-card__image gallery-card__image--staff">
+                <img class="gallery-photo gallery-photo--staff" src="assets/staff/Amisha_A_Naik.png" alt="Amisha A Naik">
+              </div>
+              <div class="gallery-card__body gallery-card__body--staff">
+                <h3>Amisha A Naik</h3>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-staff-item">
+            <div class="gallery-card gallery-card--staff">
+              <div class="gallery-card__image gallery-card__image--staff">
+                <img class="gallery-photo gallery-photo--staff" src="assets/staff/Ashwini_A_Naik.jpg" alt="Ashwini A Naik">
+              </div>
+              <div class="gallery-card__body gallery-card__body--staff">
+                <h3>Ashwini A Naik</h3>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-staff-item">
+            <div class="gallery-card gallery-card--staff">
+              <div class="gallery-card__image gallery-card__image--staff">
+                <img class="gallery-photo gallery-photo--staff" src="assets/staff/Prashant_V_Achari.jpg" alt="Prashant V Achari">
+              </div>
+              <div class="gallery-card__body gallery-card__body--staff">
+                <h3>Prashant V Achari</h3>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-staff-item">
+            <div class="gallery-card gallery-card--staff">
+              <div class="gallery-card__image gallery-card__image--staff">
+                <img class="gallery-photo gallery-photo--staff" src="assets/staff/Someshwar_T_Gouda.jpg" alt="Someshwar T Gouda">
+              </div>
+              <div class="gallery-card__body gallery-card__body--staff">
+                <h3>Someshwar T Gouda</h3>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-staff-item">
+            <div class="gallery-card gallery-card--staff">
+              <div class="gallery-card__image gallery-card__image--staff">
+                <img class="gallery-photo gallery-photo--staff" src="assets/staff/Vasant_G_Gouda.jpg" alt="Vasant G Gouda">
+              </div>
+              <div class="gallery-card__body gallery-card__body--staff">
+                <h3>Vasant G Gouda</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad about-bod-section" data-about-group="board-members" hidden>
+      <div class="container">
+        <div class="about-bod-layout">
+          <div class="about-bod-copy">
+            <span class="eyebrow">Board of Directors</span>
+            <h2>Leadership guiding the cooperative vision</h2>
+            <p>Meet the leadership representing the vision and governance of Universal Souharda.</p>
+          </div>
+          <div class="about-bod-profile">
+            <div class="about-bod-profile__media">
+              <img class="gallery-photo gallery-photo--staff" src="assets/staff/Rajat_S_Bhat.png" alt="Rajat S Bhat">
+            </div>
+            <div class="about-bod-profile__body">
+              <h3>Rajat S Bhat</h3>
             </div>
           </div>
         </div>

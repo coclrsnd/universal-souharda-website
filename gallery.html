@@ -23,7 +23,14 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link--about" href="about.html?section=about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu gallery-dropdown-menu site-dropdown-menu">
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=about">About Us</a></li>
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=staff">Staff</a></li>
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=bod">BOD</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="deposit-schemes.html">Deposit Schemes</a></li>
           <li class="nav-item"><a class="nav-link" href="loans.html">Loans</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -44,142 +51,15 @@
   <header class="page-hero">
     <div class="container">
       <span class="eyebrow">Gallery</span>
-      <h1>Our People &amp; Community</h1>
-      <p>Meet the team, leadership and community behind Universal Souharda.</p>
-      <nav class="gallery-page-tabs" aria-label="Gallery categories">
-        <a class="gallery-page-tab" data-gallery-tab href="gallery.html?category=staff">Staff</a>
-        <a class="gallery-page-tab" data-gallery-tab href="gallery.html?category=bod">Board of Directors</a>
-        <a class="gallery-page-tab" data-gallery-tab href="gallery.html?category=society">Society</a>
-      </nav>
+      <h1>Society Moments &amp; Community Highlights</h1>
+      <p>Browse branch moments, events, and community highlights from Universal Souharda.</p>
     </div>
   </header>
 
   <main>
     <section class="section-pad">
       <div class="container">
-        <div class="gallery-category" data-gallery-group="staff" hidden>
-          <div class="gallery-category__intro">
-            <span class="eyebrow">Our Team</span>
-            <h3>People behind our member service</h3>
-          </div>
-          <div class="gallery-staff-grid">
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Abhishek_U_Naik.jpg" alt="Abhishek U Naik">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Abhishek U Naik</h3>
-                </div>
-              </div>
-            </div>
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Amisha_A_Naik.png" alt="Amisha A Naik">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Amisha A Naik</h3>
-                </div>
-              </div>
-            </div>
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Ashwini_A_Naik.jpg" alt="Ashwini A Naik">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Ashwini A Naik</h3>
-                </div>
-              </div>
-            </div>
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Prashant_V_Achari.jpg" alt="Prashant V Achari">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Prashant V Achari</h3>
-                </div>
-              </div>
-            </div>
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Rajat_S_Bhat.png" alt="Rajat S Bhat">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Rajat S Bhat</h3>
-                </div>
-              </div>
-            </div>
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Someshwar_T_Gouda.jpg" alt="Someshwar T Gouda">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Someshwar T Gouda</h3>
-                </div>
-              </div>
-            </div>
-            <div class="gallery-staff-item">
-              <div class="gallery-card gallery-card--staff">
-                <div class="gallery-card__image gallery-card__image--staff">
-                  <img class="gallery-photo gallery-photo--staff" src="assets/staff/Vasant_G_Gouda.jpg" alt="Vasant G Gouda">
-                </div>
-                <div class="gallery-card__body gallery-card__body--staff">
-                  <h3>Vasant G Gouda</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-category" data-gallery-group="board-members" hidden>
-          <div class="gallery-category__intro">
-            <span class="eyebrow">Board of Directors</span>
-            <h3>Leadership guiding the cooperative vision</h3>
-            <p>Add board member portraits, meetings, or formal leadership images here.</p>
-          </div>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--placeholder gallery-card--warm">
-                <div class="gallery-card__image gallery-card__image--placeholder">
-                  <span class="gallery-placeholder-badge">Board</span>
-                </div>
-                <div class="gallery-card__body">
-                  <h3>Chairperson Portrait</h3>
-                  <p>Placeholder for the chairperson or key leadership photo.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--placeholder gallery-card--warm">
-                <div class="gallery-card__image gallery-card__image--placeholder">
-                  <span class="gallery-placeholder-badge">Board</span>
-                </div>
-                <div class="gallery-card__body">
-                  <h3>Board Meeting</h3>
-                  <p>Placeholder for formal board meeting or leadership session images.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--placeholder gallery-card--warm">
-                <div class="gallery-card__image gallery-card__image--placeholder">
-                  <span class="gallery-placeholder-badge">Board</span>
-                </div>
-                <div class="gallery-card__body">
-                  <h3>Leadership Group</h3>
-                  <p>Placeholder for a board members group photograph.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-category is-active" data-gallery-group="society">
+        <div class="gallery-category is-active">
           <div class="gallery-category__intro">
             <span class="eyebrow">Society</span>
             <h3>Branch moments, events, and community highlights</h3>

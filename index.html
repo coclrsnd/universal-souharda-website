@@ -23,7 +23,14 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link--about" href="about.html?section=about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu gallery-dropdown-menu site-dropdown-menu">
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=about">About Us</a></li>
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=staff">Staff</a></li>
+              <li><a class="dropdown-item" data-about-nav href="about.html?section=bod">BOD</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="deposit-schemes.html">Deposit Schemes</a></li>
           <li class="nav-item"><a class="nav-link" href="loans.html">Loans</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
