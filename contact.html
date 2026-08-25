@@ -79,32 +79,34 @@
 
     <section class="section-pad">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-5">
-            <div class="contact-panel h-100">
+        <div class="contact-shell">
+          <div class="contact-shell__info">
+            <div class="contact-info-block">
               <h2>Branch Information</h2>
-              <div class="contact-item">
+              <div class="contact-item contact-item--inline">
                 <strong>Address</strong>
                 <p>1st Floor, PSG Complex, Ambarkodla Road, Ankola - 581314</p>
               </div>
-              <div class="contact-item">
+              <div class="contact-item contact-item--inline">
                 <strong>Phone</strong>
-                <p>08388 232629 / 8277521413</p>
+                <p><a href="tel:08388232629">08388 232629</a> / <a href="tel:8277521413">8277521413</a></p>
               </div>
-              <div class="contact-item">
-                <strong>Hours</strong>
-                <p>Monday to Friday, 9:30 AM to 5:30 PM | Saturday, 9:30 AM to 2:30 PM</p>
+              <div class="contact-item contact-item--inline">
+                <strong>Working Hours</strong>
+                <p>Monday to Friday: 9:30 AM to 5:30 PM<br>Saturday: 9:30 AM to 2:30 PM</p>
               </div>
-              <div class="contact-item">
+              <div class="contact-item contact-item--inline">
                 <strong>Location Details</strong>
-                <p>District: Uttara Kannada, Karnataka | Postal Division: Karwar Division, Karnataka Circle</p>
+                <p>District: Uttara Kannada, Karnataka<br>Postal Division: Karwar Division, Karnataka Circle</p>
+              </div>
+              <div class="contact-panel__actions">
+                <a class="btn btn-brand" href="tel:08388232629">Call Now</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-7">
-            <div class="form-panel">
+          <div class="contact-shell__form">
+            <div class="form-panel form-panel--compact">
               <h2 id="contactForm">Send an Enquiry</h2>
-              <p>Static demo form with simple front-end confirmation. Connect it to email, Formspree, or your backend later if needed.</p>
               <form class="row g-3" id="enquiryForm">
                 <div class="col-md-6">
                   <label class="form-label" for="name">Full Name</label>
@@ -133,7 +135,7 @@
                   <textarea class="form-control" id="message" rows="5" placeholder="Tell us how we can help"></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-brand" type="submit">Submit Enquiry</button>
+                  <button class="btn btn-brand" type="submit">Send Enquiry</button>
                 </div>
                 <div class="col-12">
                   <p class="form-feedback mb-0" id="formFeedback" aria-live="polite"></p>
@@ -191,8 +193,8 @@
           <h3>Contact</h3>
           <ul class="footer-contact">
             <li>1st Floor, PSG Complex, Ambarkodla Road, Ankola - 581314</li>
-            <li>08388 232629</li>
-            <li>8277521413</li>
+            <li><a href="tel:08388232629">08388 232629</a></li>
+            <li><a href="tel:8277521413">8277521413</a></li>
           </ul>
         </div>
       </div>
