@@ -644,6 +644,108 @@ p {
   margin-top: 1rem;
 }
 
+.contact-map-section {
+  padding: 0.4rem 0 0;
+}
+
+.contact-map-embed {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 143, 136, 0.12);
+  box-shadow: 0 14px 34px rgba(18, 38, 36, 0.06);
+  background: #ffffff;
+}
+
+.contact-map-pin {
+  position: absolute;
+  top: 46%;
+  left: 56.5%;
+  transform: translate(-50%, -100%);
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: default;
+}
+
+.contact-map-pin__dot {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--brand-teal);
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 14px rgba(15, 143, 136, 0.28);
+}
+
+.contact-map-pin__dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-gold);
+  transform: translate(-50%, -50%);
+}
+
+.contact-map-pin__tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%);
+  min-width: max-content;
+  max-width: 260px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  background: rgba(23, 31, 37, 0.92);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  pointer-events: none;
+}
+
+.contact-map-pin__tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(23, 31, 37, 0.92);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.contact-map-pin:hover .contact-map-pin__tooltip,
+.contact-map-pin:focus-visible .contact-map-pin__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.contact-map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+.contact-map-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.85rem;
+}
+
 .loan-card {
   height: 100%;
 }
@@ -855,20 +957,75 @@ p {
 
 [data-page="gallery"] .page-hero {
   padding: 2.6rem 0 0.8rem;
+  border-bottom: none;
 }
 
 [data-page="gallery"] .page-hero h1 {
   max-width: none;
-  font-size: clamp(2rem, 3.4vw, 3rem);
-  margin-bottom: 0;
+  font-size: clamp(1.9rem, 2.8vw, 2.7rem);
+  margin-bottom: 0.7rem;
 }
 
 [data-page="gallery"] main .section-pad:first-child {
-  padding-top: 2rem;
+  padding-top: 0.1rem;
 }
 
 [data-page="gallery"] .gallery-category__intro {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.35rem;
+}
+
+[data-page="gallery"] .gallery-category + .gallery-category {
+  margin-top: 0;
+}
+
+[data-page="gallery"] .page-hero p {
+  max-width: 60ch;
+}
+
+[data-page="gallery"] .gallery-page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 1rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+[data-page="gallery"] .gallery-page-tab {
+  position: relative;
+  padding: 0 0 0.55rem;
+  color: var(--brand-muted);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+[data-page="gallery"] .gallery-page-tab:hover,
+[data-page="gallery"] .gallery-page-tab.is-active {
+  color: var(--brand-ink);
+}
+
+[data-page="gallery"] .gallery-page-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+[data-page="gallery"] .gallery-page-tab.is-active::after,
+[data-page="gallery"] .gallery-page-tab:hover::after {
+  background: linear-gradient(90deg, var(--brand-teal) 0 72%, var(--brand-gold) 72% 100%);
+}
+
+[data-page="gallery"] .gallery-category__intro .eyebrow {
+  margin-bottom: 0.55rem;
 }
 
 [data-page="about"] .page-hero h1 {
@@ -891,6 +1048,16 @@ p {
 }
 
 [data-page="loans"] .page-hero p {
+  max-width: none;
+  width: 100%;
+}
+
+[data-page="contact"] .page-hero h1 {
+  max-width: none;
+  white-space: nowrap;
+}
+
+[data-page="contact"] .page-hero p {
   max-width: none;
   width: 100%;
 }
@@ -1610,14 +1777,76 @@ body:not([data-page="home"]) .btn-outline-brand {
   margin-bottom: 0;
 }
 
+.gallery-card--society {
+  gap: 0.95rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.gallery-card--society .gallery-card__image {
+  height: 250px;
+  flex-basis: 250px;
+  padding: 0.34rem;
+  border-radius: 16px;
+  border: 1px solid rgba(184, 193, 198, 0.38);
+  background: #fffdfb;
+  box-shadow: 0 10px 22px rgba(18, 38, 36, 0.05);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.gallery-card--society .gallery-photo {
+  border-radius: 12px;
+  transition: transform 0.28s ease;
+}
+
+.gallery-card--society:hover .gallery-card__image {
+  transform: translateY(-3px);
+  border-color: rgba(15, 143, 136, 0.16);
+  box-shadow: 0 15px 28px rgba(18, 38, 36, 0.08);
+}
+
+.gallery-card--society:hover .gallery-photo {
+  transform: scale(1.02);
+}
+
+.gallery-card--society .gallery-card__body {
+  padding: 0 0.15rem;
+}
+
+.gallery-card--society .gallery-card__body h3 {
+  margin-bottom: 0.38rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.gallery-card--society .gallery-card__body p {
+  color: var(--brand-muted);
+  line-height: 1.62;
+}
+
+.gallery-card--society .gallery-card__body::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin: 0 0 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 143, 136, 0.78) 0 68%, rgba(245, 178, 27, 0.9) 68% 100%);
+}
+
 .gallery-card--staff {
-  padding: 0 0 0.8rem;
-  border-radius: 24px;
+  padding: 0;
+  border-radius: 0;
   background: transparent;
   border: none;
   box-shadow: none;
   text-align: center;
-  transition: transform 0.25s ease;
+  transition: transform 0.22s ease;
 }
 
 .gallery-card--staff:hover {
@@ -1625,26 +1854,66 @@ body:not([data-page="home"]) .btn-outline-brand {
 }
 
 .gallery-card__image--staff {
-  height: 340px;
-  flex-basis: 340px;
-  border-radius: 18px;
-  border: none;
-  background: transparent;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  flex-basis: auto;
+  padding: 0.32rem;
+  border-radius: 14px;
+  border: 1px solid rgba(184, 193, 198, 0.4);
+  background: #fffdfb;
+  box-shadow: 0 10px 22px rgba(18, 38, 36, 0.05);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.gallery-card--staff:hover .gallery-card__image--staff {
+  transform: translateY(-2px);
+  border-color: rgba(15, 143, 136, 0.16);
+  box-shadow: 0 14px 28px rgba(18, 38, 36, 0.08);
 }
 
 .gallery-photo--staff {
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center top;
+  border-radius: 11px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card--staff:hover .gallery-photo--staff {
+  transform: scale(1.02);
 }
 
 .gallery-card__body--staff {
-  padding: 1rem 0.4rem 0.2rem;
+  padding: 0.85rem 0.2rem 0;
 }
 
 .gallery-card__body--staff h3 {
   margin-bottom: 0;
-  font-size: 1.08rem;
-  line-height: 1.3;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+}
+
+[data-page="gallery"] .gallery-staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.35rem 1.95rem;
+}
+
+[data-page="gallery"] .gallery-staff-item {
+  width: min(100%, 201px);
+}
+
+[data-page="gallery"] .gallery-card--staff::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 0.55rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 143, 136, 0.75) 0 64%, rgba(245, 178, 27, 0.9) 64% 100%);
 }
 
 .gallery-card--placeholder {
@@ -2169,6 +2438,11 @@ body:not([data-page="home"]) .btn-outline-brand {
     flex-basis: 210px;
   }
 
+  .gallery-card--society .gallery-card__image {
+    height: 220px;
+    flex-basis: 220px;
+  }
+
   .gallery-card__image--staff {
     height: 320px;
     flex-basis: 320px;
@@ -2194,6 +2468,10 @@ body:not([data-page="home"]) .btn-outline-brand {
 
   [data-page="deposit-schemes"] .deposit-fact {
     min-width: 0;
+  }
+
+  [data-page="gallery"] .gallery-staff-item {
+    width: min(100%, 220px);
   }
 
   [data-page="loans"] .loan-process-steps {
@@ -2371,6 +2649,22 @@ body:not([data-page="home"]) .btn-outline-brand {
     padding: 0.1rem 0;
   }
 
+  [data-page="gallery"] .gallery-page-tabs {
+    gap: 0.85rem 1.1rem;
+  }
+
+  [data-page="gallery"] .gallery-page-tab {
+    font-size: 0.92rem;
+  }
+
+  [data-page="gallery"] .gallery-staff-grid {
+    gap: 1.95rem 1.4rem;
+  }
+
+  [data-page="gallery"] .gallery-staff-item {
+    width: min(100%, 177px);
+  }
+
   [data-page="loans"] .loan-product-card {
     max-width: 100%;
     padding: 0.8rem;
@@ -2538,6 +2832,11 @@ body:not([data-page="home"]) .btn-outline-brand {
   .gallery-card__image {
     height: 200px;
     flex-basis: 200px;
+  }
+
+  .gallery-card--society .gallery-card__image {
+    height: 205px;
+    flex-basis: 205px;
   }
 
   .gallery-card__image--staff {

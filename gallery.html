@@ -26,14 +26,7 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="deposit-schemes.html">Deposit Schemes</a></li>
           <li class="nav-item"><a class="nav-link" href="loans.html">Loans</a></li>
-          <li class="nav-item dropdown gallery-nav-dropdown">
-            <a class="nav-link dropdown-toggle gallery-nav-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
-            <ul class="dropdown-menu gallery-dropdown-menu">
-              <li><a class="dropdown-item" href="gallery.html?category=staff">Staff</a></li>
-              <li><a class="dropdown-item" href="gallery.html?category=bod">BOD</a></li>
-              <li><a class="dropdown-item" href="gallery.html?category=society">Society</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -51,7 +44,13 @@
   <header class="page-hero">
     <div class="container">
       <span class="eyebrow">Gallery</span>
-      <h1>Gallery</h1>
+      <h1>Our People &amp; Community</h1>
+      <p>Meet the team, leadership and community behind Universal Souharda.</p>
+      <nav class="gallery-page-tabs" aria-label="Gallery categories">
+        <a class="gallery-page-tab" data-gallery-tab href="gallery.html?category=staff">Staff</a>
+        <a class="gallery-page-tab" data-gallery-tab href="gallery.html?category=bod">Board of Directors</a>
+        <a class="gallery-page-tab" data-gallery-tab href="gallery.html?category=society">Society</a>
+      </nav>
     </div>
   </header>
 
@@ -60,11 +59,11 @@
       <div class="container">
         <div class="gallery-category" data-gallery-group="staff" hidden>
           <div class="gallery-category__intro">
-            <h3>Staff Gallery</h3>
-            <p>Meet the team members who support day-to-day service and member care.</p>
+            <span class="eyebrow">Our Team</span>
+            <h3>People behind our member service</h3>
           </div>
-          <div class="row g-4">
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+          <div class="gallery-staff-grid">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Abhishek_U_Naik.jpg" alt="Abhishek U Naik">
@@ -74,7 +73,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Amisha_A_Naik.png" alt="Amisha A Naik">
@@ -84,7 +83,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Ashwini_A_Naik.jpg" alt="Ashwini A Naik">
@@ -94,7 +93,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Prashant_V_Achari.jpg" alt="Prashant V Achari">
@@ -104,7 +103,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Rajat_S_Bhat.png" alt="Rajat S Bhat">
@@ -114,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Someshwar_T_Gouda.jpg" alt="Someshwar T Gouda">
@@ -124,7 +123,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="gallery-staff-item">
               <div class="gallery-card gallery-card--staff">
                 <div class="gallery-card__image gallery-card__image--staff">
                   <img class="gallery-photo gallery-photo--staff" src="assets/staff/Vasant_G_Gouda.jpg" alt="Vasant G Gouda">
@@ -139,8 +138,9 @@
 
         <div class="gallery-category" data-gallery-group="board-members" hidden>
           <div class="gallery-category__intro">
-            <h3>Board Members Gallery</h3>
-            <p>Add board member portraits, meetings, or formal group images here.</p>
+            <span class="eyebrow">Board of Directors</span>
+            <h3>Leadership guiding the cooperative vision</h3>
+            <p>Add board member portraits, meetings, or formal leadership images here.</p>
           </div>
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
@@ -181,12 +181,13 @@
 
         <div class="gallery-category is-active" data-gallery-group="society">
           <div class="gallery-category__intro">
-            <h3>Society Gallery</h3>
+            <span class="eyebrow">Society</span>
+            <h3>Branch moments, events, and community highlights</h3>
             <p>Current society photos are grouped here for branch, event, and community highlights.</p>
           </div>
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-              <div class="gallery-card">
+              <div class="gallery-card gallery-card--society">
                 <div class="gallery-card__image">
                   <img class="gallery-photo" src="assets/images/society images/u6.jfif" alt="Universal Souharda Cooperative Society branch exterior image">
                 </div>
@@ -197,7 +198,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--warm">
+              <div class="gallery-card gallery-card--society">
                 <div class="gallery-card__image">
                   <img class="gallery-photo" src="assets/images/society images/u5.jfif" alt="Universal Souharda Cooperative Society annual meeting image">
                 </div>
@@ -208,7 +209,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--dark">
+              <div class="gallery-card gallery-card--society">
                 <div class="gallery-card__image">
                   <img class="gallery-photo" src="assets/images/society images/u2.jfif" alt="Universal Souharda Cooperative Society customer service desk image">
                 </div>
@@ -219,7 +220,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--soft">
+              <div class="gallery-card gallery-card--society">
                 <div class="gallery-card__image">
                   <img class="gallery-photo" src="assets/images/society images/u7.jfif" alt="Universal Souharda Cooperative Society loan awareness camp image">
                 </div>
@@ -230,7 +231,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="gallery-card">
+              <div class="gallery-card gallery-card--society">
                 <div class="gallery-card__image">
                   <img class="gallery-photo" src="assets/images/society images/u8.png" alt="Universal Souharda Cooperative Society member interaction image">
                 </div>
@@ -241,7 +242,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--warm">
+              <div class="gallery-card gallery-card--society">
                 <div class="gallery-card__image">
                   <img class="gallery-photo" src="assets/images/society images/u4.jfif" alt="Universal Souharda Cooperative Society community initiative image">
                 </div>
@@ -301,9 +302,9 @@
         <div class="col-lg-3">
           <h3>Contact</h3>
           <ul class="footer-contact">
-            <li>123 Main Road, Your City</li>
-            <li>+91 90000 00000</li>
-            <li>info@universalsociety.com</li>
+            <li>1st Floor, PSG Complex, Ambarkodla Road, Ankola - 581314</li>
+            <li>08388 232629</li>
+            <li>8277521413</li>
           </ul>
         </div>
       </div>

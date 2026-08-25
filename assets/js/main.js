@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const galleryGroups = document.querySelectorAll("[data-gallery-group]");
 
   if (galleryGroups.length > 0) {
+    const galleryTabs = document.querySelectorAll("[data-gallery-tab]");
     const categoryAliases = {
       bod: "board-members",
       board: "board-members",
@@ -74,6 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const isMatch = group.dataset.galleryGroup === selectedCategory;
         group.hidden = !isMatch;
         group.classList.toggle("is-active", isMatch);
+      });
+
+      galleryTabs.forEach((tab) => {
+        const href = new URL(tab.href, window.location.href);
+        const requested = href.searchParams.get("category") || "society";
+        const resolved = categoryAliases[requested] || "society";
+        const isActive = resolved === selectedCategory;
+        tab.classList.toggle("is-active", isActive);
+        if (isActive) {
+          tab.setAttribute("aria-current", "page");
+        } else {
+          tab.removeAttribute("aria-current");
+        }
       });
     };
 
