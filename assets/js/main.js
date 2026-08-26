@@ -49,13 +49,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const enquiryForm = document.getElementById("enquiryForm");
   const formFeedback = document.getElementById("formFeedback");
+  const enquirySubmitButton = document.getElementById("enquirySubmitButton");
+  const enquiryToastElement = document.getElementById("enquiryToast");
+  const enquiryToastMessage = document.getElementById("enquiryToastMessage");
 
-  if (enquiryForm && formFeedback) {
-    enquiryForm.addEventListener("submit", (event) => {
+  if (enquiryForm && formFeedback && enquirySubmitButton) {
+    const showEnquiryToast = (message, isSuccess) => {
+      if (!enquiryToastElement || !enquiryToastMessage || typeof bootstrap === "undefined") {
+        formFeedback.textContent = message;
+        formFeedback.dataset.state = isSuccess ? "success" : "error";
+        return;
+      }
+
+      enquiryToastMessage.textContent = message;
+      enquiryToastElement.classList.remove("text-bg-success", "text-bg-danger");
+      enquiryToastElement.classList.add(isSuccess ? "text-bg-success" : "text-bg-danger");
+      const enquiryToast = bootstrap.Toast.getOrCreateInstance(enquiryToastElement, {
+        delay: 3200,
+      });
+      enquiryToast.show();
+    };
+
+    enquiryForm.addEventListener("submit", async (event) => {
       event.preventDefault();
-      formFeedback.textContent =
-        "Thank you. This is a demo form for now. We can connect it to a live email or backend service later.";
-      enquiryForm.reset();
+
+      if (!enquiryForm.reportValidity()) {
+        return;
+      }
+
+      formFeedback.textContent = "";
+      formFeedback.dataset.state = "";
+      enquirySubmitButton.disabled = true;
+      enquirySubmitButton.textContent = "Sending...";
+
+      try {
+        const formData = new FormData(enquiryForm);
+        const response = await fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
+        });
+
+        if (!response.ok) {
+          throw new Error("Netlify form submission failed.");
+        }
+
+        enquiryForm.reset();
+        formFeedback.textContent = "Your enquiry has been sent successfully.";
+        formFeedback.dataset.state = "success";
+        showEnquiryToast("Your enquiry has been sent successfully.", true);
+      } catch (error) {
+        formFeedback.textContent = "Unable to send your enquiry. Please try again.";
+        formFeedback.dataset.state = "error";
+        showEnquiryToast("Unable to send your enquiry. Please try again.", false);
+      } finally {
+        enquirySubmitButton.disabled = false;
+        enquirySubmitButton.textContent = "Send Enquiry";
+      }
     });
   }
 

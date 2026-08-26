@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Universal Souharda Cooperative Society | Contact</title>
   <meta name="description" content="Contact Universal Souharda Cooperative Society for member support, enquiries, and branch information.">
+  <link rel="icon" href="assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +17,15 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="contact">
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="enquiryToast" class="toast contact-toast align-items-center border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="enquiryToastMessage"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -114,22 +128,24 @@
           <div class="contact-shell__form">
             <div class="form-panel form-panel--compact">
               <h2 id="contactForm">Send an Enquiry</h2>
-              <form class="row g-3" id="enquiryForm">
+              <form class="row g-3" id="enquiryForm" name="contact-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact-enquiry">
+                <input type="hidden" name="bot-field">
                 <div class="col-md-6">
                   <label class="form-label" for="name">Full Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Enter your name" required>
+                  <input class="form-control" id="name" name="full_name" type="text" placeholder="Enter your name" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="phone">Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number" required>
+                  <input class="form-control" id="phone" name="phone_number" type="tel" placeholder="Enter your phone number" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="email">Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Enter your email">
+                  <input class="form-control" id="email" name="email_address" type="email" placeholder="Enter your email">
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="service">Service Interested In</label>
-                  <select class="form-select" id="service" required>
+                  <select class="form-select" id="service" name="service_interested_in" required>
                     <option value="">Choose an option</option>
                     <option>Membership</option>
                     <option>Personal Loan</option>
@@ -139,10 +155,10 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label" for="message">Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Tell us how we can help"></textarea>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us how we can help"></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-brand" type="submit">Send Enquiry</button>
+                  <button class="btn btn-brand" id="enquirySubmitButton" type="submit">Send Enquiry</button>
                 </div>
                 <div class="col-12">
                   <p class="form-feedback mb-0" id="formFeedback" aria-live="polite"></p>

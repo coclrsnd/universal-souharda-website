@@ -2192,6 +2192,16 @@ body:not([data-page="home"]) .btn-outline-brand {
   font-weight: 700;
 }
 
+.form-feedback[data-state="error"] {
+  color: #b42318;
+}
+
+.contact-toast {
+  min-width: 290px;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(18, 38, 36, 0.12);
+}
+
 .site-footer {
   padding: 4rem 0 2rem;
   background: var(--brand-ink);
