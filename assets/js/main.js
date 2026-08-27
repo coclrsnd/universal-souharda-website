@@ -185,4 +185,54 @@ document.addEventListener("DOMContentLoaded", () => {
     const resolvedSection = aboutAliases[requestedSection] || "about";
     updateAboutSection(resolvedSection);
   }
+
+  if (currentPage === "gallery") {
+    const galleryLightboxElement = document.getElementById("galleryLightbox");
+    const galleryLightboxImage = document.getElementById("galleryLightboxImage");
+    const galleryLightboxLabel = document.getElementById("galleryLightboxLabel");
+    const galleryZoomTriggers = document.querySelectorAll(".gallery-card__image");
+
+    if (
+      galleryLightboxElement &&
+      galleryLightboxImage &&
+      galleryLightboxLabel &&
+      galleryZoomTriggers.length > 0 &&
+      typeof bootstrap !== "undefined"
+    ) {
+      const galleryLightbox = bootstrap.Modal.getOrCreateInstance(galleryLightboxElement);
+
+      const openGalleryLightbox = (trigger) => {
+        const image = trigger.querySelector(".gallery-photo");
+        const title = trigger.closest(".gallery-card")?.querySelector(".gallery-card__body h3");
+
+        if (!image) {
+          return;
+        }
+
+        galleryLightboxImage.src = image.src;
+        galleryLightboxImage.alt = image.alt;
+        galleryLightboxLabel.textContent = title ? title.textContent.trim() : "Gallery Image";
+        galleryLightbox.show();
+      };
+
+      galleryZoomTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          openGalleryLightbox(trigger);
+        });
+
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openGalleryLightbox(trigger);
+          }
+        });
+      });
+
+      galleryLightboxElement.addEventListener("hidden.bs.modal", () => {
+        galleryLightboxImage.src = "";
+        galleryLightboxImage.alt = "";
+        galleryLightboxLabel.textContent = "";
+      });
+    }
+  }
 });

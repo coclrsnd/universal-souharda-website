@@ -68,67 +68,31 @@
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
               <div class="gallery-card gallery-card--society">
-                <div class="gallery-card__image">
-                  <img class="gallery-photo" src="assets/images/society images/u6.jfif" alt="Universal Souharda Cooperative Society branch exterior image">
+                <div class="gallery-card__image" role="button" tabindex="0" aria-label="Open Student Recognition image in larger view">
+                  <img class="gallery-photo" src="assets/society/img1.png" alt="Universal Souharda Cooperative Society student recognition image">
                 </div>
                 <div class="gallery-card__body">
-                  <h3>Branch Exterior</h3>
-                  <p>Main office or branch front image.</p>
+                  <h3>Student Recognition</h3>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="gallery-card gallery-card--society">
-                <div class="gallery-card__image">
-                  <img class="gallery-photo" src="assets/images/society images/u5.jfif" alt="Universal Souharda Cooperative Society annual meeting image">
+                <div class="gallery-card__image" role="button" tabindex="0" aria-label="Open Tree Plantation image in larger view">
+                  <img class="gallery-photo gallery-photo--tree-plantation" src="assets/society/img2.png" alt="Universal Souharda Cooperative Society tree plantation image">
                 </div>
                 <div class="gallery-card__body">
-                  <h3>Annual Meeting</h3>
-                  <p>Member gathering or important society event.</p>
+                  <h3>Tree Plantation</h3>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="gallery-card gallery-card--society">
-                <div class="gallery-card__image">
-                  <img class="gallery-photo" src="assets/images/society images/u2.jfif" alt="Universal Souharda Cooperative Society customer service desk image">
+                <div class="gallery-card__image" role="button" tabindex="0" aria-label="Open Society Branch image in larger view">
+                  <img class="gallery-photo" src="assets/society/img4.png" alt="Universal Souharda Cooperative Society branch image">
                 </div>
                 <div class="gallery-card__body">
-                  <h3>Customer Service Desk</h3>
-                  <p>In-branch experience and service support moments.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--society">
-                <div class="gallery-card__image">
-                  <img class="gallery-photo" src="assets/images/society images/u7.jfif" alt="Universal Souharda Cooperative Society loan awareness camp image">
-                </div>
-                <div class="gallery-card__body">
-                  <h3>Loan Awareness Camp</h3>
-                  <p>Outreach, awareness drive, or educational workshop.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--society">
-                <div class="gallery-card__image">
-                  <img class="gallery-photo" src="assets/images/society images/u8.png" alt="Universal Souharda Cooperative Society member interaction image">
-                </div>
-                <div class="gallery-card__body">
-                  <h3>Member Interaction</h3>
-                  <p>Human moments that build trust and connection with members.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="gallery-card gallery-card--society">
-                <div class="gallery-card__image">
-                  <img class="gallery-photo" src="assets/images/society images/u4.jfif" alt="Universal Souharda Cooperative Society community initiative image">
-                </div>
-                <div class="gallery-card__body">
-                  <h3>Community Initiative</h3>
-                  <p>Social impact work or member support initiative.</p>
+                  <h3>Society Branch</h3>
                 </div>
               </div>
             </div>
@@ -193,6 +157,20 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal fade gallery-lightbox" id="galleryLightbox" tabindex="-1" aria-labelledby="galleryLightboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content gallery-lightbox__content">
+        <button type="button" class="btn-close gallery-lightbox__close" data-bs-dismiss="modal" aria-label="Close image preview"></button>
+        <div class="gallery-lightbox__body">
+          <img id="galleryLightboxImage" class="gallery-lightbox__image" src="" alt="">
+        </div>
+        <div class="gallery-lightbox__caption">
+          <h2 id="galleryLightboxLabel"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
