@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         eyebrow: "About us",
         title: "Built on Trust. Driven by Service. Growing Together.",
         text:
-          "Universal Souharda Co-op Society Ltd. was established in 2023 with a clear purpose to create a trusted, member-focused financial institution rooted in cooperative values and modern technology.",
+          "Universal Souharda Co-op Society Ltd. was built with a clear purpose to create a trusted, member-focused financial institution rooted in cooperative values and modern technology.",
       },
       staff: {
         eyebrow: "Our Team",
